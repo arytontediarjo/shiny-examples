@@ -19,7 +19,7 @@ RUN apt-get update && \
 
 # copy necessary files
 ## app folder
-COPY /app ./app
+COPY . ./app
 ## renv.lock file
 COPY renv.lock ./renv.lock
 
@@ -31,4 +31,4 @@ RUN Rscript -e 'renv::restore()'
 EXPOSE 3838
 
 # run app on container start
-# CMD ["R", "-e", "shiny::runApp('/app', host = '0.0.0.0', port = 3838)"]
+#CMD ["R", "-e", "shiny::runApp('/app', host = '0.0.0.0', port = 3838)"]

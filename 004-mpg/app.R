@@ -1,5 +1,6 @@
 library(shiny)
 library(datasets)
+library(DT)
 
 # Data pre-processing ----
 # Tweak the "am" variable to have nicer factor labels -- since this
